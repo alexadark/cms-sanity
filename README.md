@@ -4,7 +4,7 @@ This example showcases Next.js's [Static Generation](https://nextjs.org/docs/bas
 
 You'll get:
 
-- Sanity Studio running on localhost
+- Sanity Studio running on localhost.
 - Sub-second as-you-type previews in Next.js
 - [On-demand revalidation of pages](https://nextjs.org/blog/next-12-1#on-demand-incremental-static-regeneration-beta) with [GROQ powered webhooks](https://www.sanity.io/docs/webhooks)
 
@@ -121,11 +121,11 @@ SANITY_STUDIO_REVALIDATE_SECRET=...
 Now, go back to `resolveProductionUrl.js` and add a function that will receive the full document that was selected for previewing:
 
 ```js
-const previewSecret = 'MY_SECRET' // Copy the string you used for SANITY_PREVIEW_SECRET
-const projectUrl = 'http://localhost:3000'
+const previewSecret = "MY_SECRET"; // Copy the string you used for SANITY_PREVIEW_SECRET
+const projectUrl = "http://localhost:3000";
 
 export default function resolveProductionUrl(document) {
-  return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${document.slug.current}`
+  return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${document.slug.current}`;
 }
 ```
 
